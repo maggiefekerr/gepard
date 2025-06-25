@@ -437,12 +437,14 @@ class HybridCFF(MellinBarnesCFF, DispersionFixedPoleCFF, CFF):
 
     def ImE(self, pt, xi=0):
         """Imaginary part of CFF E."""
-        return MellinBarnesCFF.ImE(self, pt) + DispersionFixedPoleCFF.ImE(self, pt, xi)
+        #return MellinBarnesCFF.ImE(self, pt) + DispersionFixedPoleCFF.ImE(self, pt, xi)
+        return 0
 
     def ReE(self, pt):
         """Real part of CFF E."""
-        return MellinBarnesCFF.ReE(self, pt) + DispersionFixedPoleCFF.ReE(
-                self, pt, imfun=DispersionFixedPoleCFF.ImE)
+        #return MellinBarnesCFF.ReE(self, pt) + DispersionFixedPoleCFF.ReE(
+        #        self, pt, imfun=DispersionFixedPoleCFF.ImE)
+        return 0
 
     # Tildes are not yet provided by MellinBarnesCFF model
 
