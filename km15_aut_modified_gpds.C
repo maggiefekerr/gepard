@@ -19,7 +19,7 @@ void km15_aut_modified_gpds(TString paramFile, Int_t numBins, Double_t beamE=10.
             if_input_km15 >> tpos >> xB >> Q2;
             cout << tpos << " " << xB << " " << Q2 << endl;
 
-            TString histFile = Form("./km15_aut_output/output_noH_-t_%.3f_xB_%.3f_Q2_%.3f.txt", tpos, xB, Q2);
+            TString histFile = Form("./km15_aut_output/output_noE_-t_%.3f_xB_%.3f_Q2_%.3f.txt", tpos, xB, Q2);
             std::ostringstream oss;
             oss << "python -u km15_aut.py km15_aut " << histFile << " " << tpos << " " << xB << " " << Q2 << " " << numBins << " " << beamE;
             std::string run = oss.str();
@@ -81,7 +81,7 @@ void km15_aut_modified_gpds(TString paramFile, Int_t numBins, Double_t beamE=10.
             c1->Update();
         }
         c1->Update();
-        c1->SaveAs(Form("./km15_aut_output/output_noH_%d.png", i));   
+        c1->SaveAs(Form("./km15_aut_output/output_noE_%d.png", i));   
     }
     if_input_km15.close();
 }
