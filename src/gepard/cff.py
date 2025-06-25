@@ -428,12 +428,14 @@ class HybridCFF(MellinBarnesCFF, DispersionFixedPoleCFF, CFF):
 
     def ImH(self, pt, xi=0):
         """Imaginary part of CFF H."""
-        return MellinBarnesCFF.ImH(self, pt) + DispersionFixedPoleCFF.ImH(self, pt, xi)
+        #return MellinBarnesCFF.ImH(self, pt) + DispersionFixedPoleCFF.ImH(self, pt, xi)
+        return 0
 
     def ReH(self, pt):
         """Real part of CFF H."""
-        return MellinBarnesCFF.ReH(self, pt) + DispersionFixedPoleCFF.ReH(
-                self, pt, imfun=DispersionFixedPoleCFF.ImH)
+        #return MellinBarnesCFF.ReH(self, pt) + DispersionFixedPoleCFF.ReH(
+        #        self, pt, imfun=DispersionFixedPoleCFF.ImH)
+        return 0
 
     def ImE(self, pt, xi=0):
         """Imaginary part of CFF E."""
