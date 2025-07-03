@@ -428,21 +428,25 @@ class HybridCFF(MellinBarnesCFF, DispersionFixedPoleCFF, CFF):
 
     def ImH(self, pt, xi=0):
         """Imaginary part of CFF H."""
-        return MellinBarnesCFF.ImH(self, pt) """+ DispersionFixedPoleCFF.ImH(self, pt, xi)"""
+        #return MellinBarnesCFF.ImH(self, pt) + DispersionFixedPoleCFF.ImH(self, pt, xi)
+        return MellinBarnesCFF.ImH(self, pt)
 
     def ReH(self, pt):
         """Real part of CFF H."""
-        return MellinBarnesCFF.ReH(self, pt) """+ DispersionFixedPoleCFF.ReH(
-                self, pt, imfun=DispersionFixedPoleCFF.ImH)"""
+        #return MellinBarnesCFF.ReH(self, pt) + DispersionFixedPoleCFF.ReH(
+        #        self, pt, imfun=DispersionFixedPoleCFF.ImH)
+        return MellinBarnesCFF.ReH(self, pt)
 
     def ImE(self, pt, xi=0):
         """Imaginary part of CFF E."""
-        return MellinBarnesCFF.ImE(self, pt) """+ DispersionFixedPoleCFF.ImE(self, pt, xi)"""
+        #return MellinBarnesCFF.ImE(self, pt) + DispersionFixedPoleCFF.ImE(self, pt, xi)
+        return MellinBarnesCFF.ImE(self, pt)
 
     def ReE(self, pt):
         """Real part of CFF E."""
-        return MellinBarnesCFF.ReE(self, pt) """+ DispersionFixedPoleCFF.ReE(
-                self, pt, imfun=DispersionFixedPoleCFF.ImE)"""
+        #return MellinBarnesCFF.ReE(self, pt) + DispersionFixedPoleCFF.ReE(
+        #        self, pt, imfun=DispersionFixedPoleCFF.ImE)
+        return MellinBarnesCFF.ReE(self, pt)
 
     # Tildes are not yet provided by MellinBarnesCFF model
 
