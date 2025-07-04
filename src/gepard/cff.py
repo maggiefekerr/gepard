@@ -385,7 +385,7 @@ class DispersionFixedPoleCFF(DispersionCFF, PionPole):
         """Imaginary part of CFF E."""
         # Just changing function signature w.r.t. CFF
         # to make it compatible for dispersion integral
-        return 0
+        return 0.01
 
     def ReEt(self, pt: data.DataPoint):
         """Instead of disp. rel. use pole formula."""
